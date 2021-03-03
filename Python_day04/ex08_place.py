@@ -3,17 +3,17 @@ from tkinter.ttk import Label, Entry, Button
 
 win = Tk()
 
-win.geometry("230x160")
+win.geometry("220x160")
 
 menu_area = Menu(win)
 win.config(menu=menu_area)
 
 menu1 = Menu(menu_area)
-menu1.add_command(label="New")
+menu1.add_command(label="New ...")
 menu_area.add_cascade(label="File", menu=menu1)
 
 menu2 = Menu(menu_area)
-menu2.add_command(label="Help")
+menu2.add_command(label="About ...")
 menu_area.add_cascade(label="Help", menu=menu2)
 
 label_frame = LabelFrame(win, text='label frame')
@@ -35,7 +35,7 @@ lbl_email.grid(row=2, column=0)
 entry_email.grid(row=2, column=1, padx=5, pady=5)
 
 penedwindow = PanedWindow(relief="raised", bd=0)
-penedwindow.place(x=20 ,y=125)
+penedwindow.place(x=20, y=125)
 
 btn_ok = Button(penedwindow, text="확인")
 btn_cancel = Button(penedwindow, text="취소")

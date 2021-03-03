@@ -6,7 +6,7 @@ t.pencolor('Red')
 t.speed(0)
 
 length = 5
-while True < 500 :
+while length < 500 :
     t.left(89)
     t.forward(length)
     length += 3

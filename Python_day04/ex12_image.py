@@ -1,26 +1,27 @@
 from tkinter import Tk, PhotoImage, Label, Button
 
-def img1() :
-    newImg = PhotoImage(file="image01.png")
+
+def img1():
+    newImg = PhotoImage(file="picture01.png")
     imgLabel.config(image=newImg)
     imgLabel.image = newImg
 
-def img2() :
-    newImg = PhotoImage(file="image02.png")
+def img2():
+    newImg = PhotoImage(file="picture02.png")
     imgLabel.config(image=newImg)
     imgLabel.image = newImg
 
-def img3() :
-    newImg = PhotoImage(file="image03.png")
+def img3():
+    newImg = PhotoImage(file="picture03.png")
     imgLabel.config(image=newImg)
     imgLabel.image = newImg
 
 win = Tk()
 
-win.geometry("700x800+100+100")
+win.geometry("600x400+100+100")
 
-image = PhotoImage(file="image01.png")
-imgLabel = Label(win, image=image, width=500, height=700)
+image = PhotoImage(file="picture01.png")
+imgLabel = Label(win, image=image, width=600, height=350)
 
 imgLabel.grid(row=0, column=0, columnspan=3)
 
@@ -32,5 +33,5 @@ btn01.grid(row=1, column=0)
 btn02.grid(row=1, column=1)
 btn03.grid(row=1, column=2)
 
-if __name__ == '__main__' :
+if __name__ == '__main__':
     win.mainloop()

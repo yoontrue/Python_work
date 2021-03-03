@@ -15,3 +15,10 @@ left_label.pack(side="right", fill="y")
 left_label = Label(win, text="left", background="Blue")
 left_label.pack(side="left", fill="y")
 
+
+
+
+
+
+if __name__ == '__main__':
+    win.mainloop()

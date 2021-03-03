@@ -1,15 +1,23 @@
 from tkinter import Tk
 from tkinter.ttk import Label
 
-x = 150
-y = 100
+x = 120
+y = 80
 
-def mouseEvtHandler(event) :
-    global x,y
-    x, y = (event.x, event.y)
-    print(f'{x}, {y}')
+def leftClick(event) :
+    global x
+    x -= 10
     lbl.place(x=x, y=y)
 
+def wheelClick(event):
+    global x
+    x = 120
+    lbl.place(x=x, y=y)
+
+def rightClick(event):
+    global x
+    x += 10
+    lbl.place(x=x, y=y)
 
 def scroll(event) :
     global y
@@ -19,16 +27,18 @@ def scroll(event) :
         y -= 10
     lbl.place(x=x, y=y)
 
-win = Tk()
 
+win = Tk()
 win.geometry("300x200+100+100")
 
-lbl = Label(win, text="나는 자연인이다")
+lbl = Label(win, text="자연인")
 lbl.place(x=x, y=y)
 
-
-win.bind("<B1-Motion>", mouseEvtHandler)
+win.bind("<Button-1>", leftClick)
+win.bind("<Button-2>", wheelClick)
+win.bind("<Button-3>", rightClick)
 win.bind("<MouseWheel>", scroll)
+
 
 if __name__ == '__main__':
     win.mainloop()
